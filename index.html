@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MinimalJNT - CSS Theme</title>
+	<link rel="stylesheet" href="screen.css">
+</head>
+<body>
+	<header>
+		<div id="title"><a href="#">Titre</a></div>
+		<nav>
+			<ul>
+				<li><a href="#">Lorem</a></li>
+				<li><a href="#">Dolorem</a></li>
+				<li><a href="#">Quam</a></li>
+				<li><a href="#">Omnis</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h1>Titre de niveau 1</h1>
+		<h2>Titre de niveau 2</h2>
+		<h3>Titre de niveau 3</h3>
+		<h4>Titre de niveau 4</h4>
+		<h5>Titre de niveau 5</h5>
+		<h6>Titre de niveau 6</h6>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi doloremque architecto quam atque molestiae placeat adipisci, tempora neque, exercitationem quaerat velit natus totam, alias debitis, <a href="#">ratione</a> consequatur magni quas explicabo numquam qui. Suscipit maxime obcaecati vero, aperiam ea beatae doloribus fugiat praesentium voluptates libero sequi expedita repellat magni voluptas maiores, impedit excepturi corporis! Consectetur eveniet hic suscipit ut veritatis dolore, illo nostrum vitae alias, ipsam. Dolores, molestiae. Dolore veniam dignissimos esse nam, similique obcaecati deserunt minima quae, iste voluptatem iure fugit aut ipsa consequuntur ullam rem voluptates qui, at repudiandae. Eius et assumenda vel ipsa doloremque sequi hic totam cum.</p>
+		<p>Iusto rem, in est ipsum consectetur repellat aperiam <a href="#">ratione</a> delectus eveniet cumque commodi at omnis ipsam quod odio quo quaerat ex minima incidunt saepe aliquid illo veritatis ab. Est neque quis, quia tempora fugit corrupti ullam animi et eligendi ut, quibusdam saepe unde vitae molestiae at nulla sed! Omnis non eum repellat veritatis incidunt rem consequuntur perferendis cupiditate nemo debitis nam voluptatum doloribus aspernatur, accusantium, reiciendis aperiam impedit tenetur suscipit ullam, neque mollitia doloremque magni. Cum dolore totam vero, sequi a fugit unde. Esse temporibus amet provident officia cum necessitatibus illo, neque sed eos voluptas officiis ipsam dicta, dignissimos aliquid!</p>
+		<p>Id incidunt quibusdam blanditiis <a href="#">ratione</a>, culpa, delectus aut soluta fuga dolor excepturi rerum, corporis natus placeat ipsa quam corrupti iure alias ducimus maxime dicta possimus mollitia modi perferendis qui. Quae, dolor. Repudiandae at modi ex vitae voluptate rem consequatur magnam, corrupti veritatis blanditiis dolorem quibusdam, sit asperiores excepturi ut? Dolores ab molestiae reprehenderit odit architecto temporibus cumque. Voluptas iusto dolorem unde voluptate veniam, consectetur sint possimus adipisci cupiditate assumenda nesciunt alias quas. At harum, quis sit, facilis atque possimus impedit excepturi cum illo dolorum obcaecati nemo in! Inventore quaerat iste fuga, obcaecati, natus aspernatur dolor, eaque culpa dolore necessitatibus vel.</p>
+
+		<pre>
+function req(src, cb) {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = src;
+        s.onload = function() {
+                cb();
+        }
+        document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+req('http://code.jquery.com/jquery-latest.min.js', function() {
+        var $ = jQuery;
+        $(window).load(function(){
+                var script = $('script#autotext');
+                var fullUrl = script.attr('src').split('?');
+                var queryString = (fullUrl.length > 1 ? fullUrl[1] : '').split('&amp;')
+                var params = [];
+                for (var i = 0, l = queryString.length; i &lt; l; ++i) {
+                        var splitted = queryString[i].split('=');
+                        params[splitted[0]] = splitted[1];
+                }
+                var max_lines = params['max_lines'] || 1;
+                var min_lines = params['min_lines'] || 1;
+                $.getJSON('http://projects.c-mh.fr/autotext/proxy.php?min_lines=' + min_lines + '&amp;max_lines=' + max_lines + '&amp;callback=?', function(data){
+                        script.replaceWith(data.quote);
+                });
+        });
+});
+		</pre>
+
+		<blockquote>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<cite>Lorem ipsum</cite>
+		</blockquote>
+
+		<section>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima laudantium quis ipsum optio iure autem corporis eveniet, labore rerum hic nisi maiores et cumque molestiae reprehenderit pariatur aspernatur unde aut a. Veritatis saepe voluptatem nisi, iste ipsa nulla unde labore nesciunt possimus, ab ipsum sit beatae architecto commodi officiis eius illum eum dolorum eos. Blanditiis vero enim ad explicabo nesciunt natus tenetur repellendus ducimus non! Perspiciatis rerum accusantium labore, in, nisi tempore atque quo sit magni, aliquam vel rem iusto. Officia soluta et unde vero incidunt, obcaecati assumenda, magni vitae, nisi delectus fugit nulla consequatur, distinctio ducimus sed! Dolorum, illo.</p>
+		</section>
+
+		<ul>
+			<li>Lorem ipsum dolor.</li>
+			<li>Ad tenetur, suscipit?</li>
+			<li>Lorem ipsum dolor.
+				<ul>
+					<li>Lorem ipsum dolor.</li>
+					<li>Autem, hic, cum?
+						<ul>
+							<li>Lorem ipsum dolor.</li>
+							<li>Accusamus, quae, placeat!</li>
+							<li>Quasi, blanditiis, odit.</li>
+						</ul>
+					</li>
+					<li>Officia, qui, corporis.</li>
+					<li>Quaerat distinctio, magnam.</li>
+				</ul>
+			</li>
+			<li>Lorem ipsum dolor.</li>
+			<li>A, soluta, similique.</li>
+			<li>Quis dicta, harum.</li>
+		</ul>
+
+		<ol>
+			<li>Lorem ipsum dolor.</li>
+			<li>Libero dolorem, natus.</li>
+			<li>Lorem ipsum dolor.
+				<ol>
+					<li>Lorem ipsum dolor.</li>
+					<li>Odit, dolorum, ex.</li>
+					<li>Alias, suscipit, ut.</li>
+					<li>Ex, excepturi, recusandae.</li>
+				</ol>
+			</li>
+			<li>Lorem ipsum dolor.</li>
+			<li>Explicabo, ducimus, nam?</li>
+			<li>Reiciendis, eveniet, veritatis.</li>
+		</ol>
+
+		<p><img src="http://lorempixel.com/1920/1080" alt=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, deserunt, praesentium, sequi atque iusto temporibus ratione, quis odio fuga voluptate provident natus facere corrupti sit minus beatae et incidunt mollitia quos tenetur. Atque assumenda fugit esse recusandae ratione, ut, debitis quod tempora culpa accusantium cupiditate dicta consequuntur corrupti suscipit, a voluptates nesciunt. Doloribus veritatis ea ipsa, eum porro rem vitae hic, sequi neque praesentium cupiditate beatae corporis maxime iusto repellat architecto corrupti quae distinctio blanditiis unde atque vero officia. Eligendi non excepturi repellendus exercitationem illo rem esse fugit, deleniti corporis ipsum fugiat debitis provident hic dolores unde odit maxime. Amet.</p>
+		<p><img src="http://lorempixel.com/100/200" alt="" class="float-left"> Quasi voluptas quod consequuntur incidunt itaque reprehenderit est nam officiis maxime atque ab molestiae mollitia, odio cumque nulla eum ducimus impedit cum fugit fugiat, vero adipisci voluptatum quidem. Saepe neque facere excepturi expedita, perferendis animi cumque nesciunt! Illo cumque, cupiditate earum suscipit possimus iusto id dicta distinctio porro impedit temporibus vitae numquam, sunt exercitationem ut et eveniet laboriosam minima vel dolorem sint provident assumenda nesciunt deleniti. Nisi voluptatum pariatur quisquam excepturi, iusto nemo. Dignissimos sit, nam aliquid, libero soluta consequuntur voluptates assumenda nostrum iure quod voluptatem iusto odio eius dolorum reiciendis aspernatur! Commodi, eligendi, dicta. Natus illum delectus, dolorum consectetur?</p>
+		<p><img src="http://lorempixel.com/300/200" alt="" class="float-right"> Dolore similique suscipit ab eligendi in placeat eius praesentium nobis dolorum rem delectus, commodi rerum quasi aliquam beatae soluta sunt, minus reiciendis veritatis. Cupiditate tenetur quasi sed possimus corrupti non, modi reiciendis temporibus laboriosam quo et vitae illum assumenda earum repudiandae, molestias optio tempore! Praesentium nostrum saepe animi minima facere pariatur, iusto illum at amet quos? Impedit in deleniti veniam provident, aspernatur numquam dolore voluptates eius debitis quaerat ipsam quibusdam, a nulla. Quae animi at maxime ad, perspiciatis nihil. Nulla, velit. Quis illum, ratione libero, expedita ullam doloremque iusto quasi labore reiciendis officia dolorum tempore dicta, illo. Provident, sit, aliquid.</p>
+	</main>
+
+	<footer>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, reiciendis nesciunt voluptatem!</p>
+	</footer>
+
+	<section id="primary">
+		<button>+</button>
+	</section>
+</body>
+</html>
